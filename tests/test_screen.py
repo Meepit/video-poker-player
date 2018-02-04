@@ -27,6 +27,10 @@ class ScreenTest(unittest.TestCase):
         self.screen.get_screen(self.screen.number)
         self.screen.image_grabber.grab.assert_called()
 
+    def test_invalid_screen_number(self):
+        with self.assertRaises(ValueError):
+            self.screen.get_screen(5)
+
     # def random_test(self):
     #     with patch('win32api.GetSystemMetrics', return_value='meme'):
     #         res = self.screen.res

@@ -17,8 +17,8 @@ class Screen:
         self.y_offset = self.res[1] // 2
 
     def get_screen(self, section):
-        # if 1 <= section >= 4:
-        #     raise Exception('Section must be between 1-4 inclusive')
+        if 1 <= section >= 4:
+            raise ValueError('Section must be between 1-4 inclusive')
         if section == 1:
             img = self.image_grabber.grab((0, 0, self.res[0] // 2, self.res[1] // 2))
         elif section == 2:
