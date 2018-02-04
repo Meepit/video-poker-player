@@ -1,22 +1,27 @@
 import unittest
 from unittest import mock
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 from screen import Screen
 import win32api
 
 
 class ScreenTest(unittest.TestCase):
     def setUp(self):
-        self.screen = Screen(1)
+        win_api = MagicMock()
+        self.res_return = 500
+        win_api.GetSystemMetrics.return_value = self.res_return
+        self.screen = Screen(1, win_api)
 
     def test_setup_sets_resolution(self):
-        res = (win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1))
-        self.assertEqual(self.screen.res, res)
+        self.assertEqual(self.screen.res, (self.res_return,self.res_return))
 
     def test_setup_sets_x_offset(self):
-        x_offset = win32api.GetSystemMetrics(0) // 2
-        self.assertEqual(self.screen.x_offset, x_offset)
+        self.assertEqual(self.screen.x_offset, self.res_return // 2)
 
     def test_setup_sets_y_offset(self):
-        y_offset = win32api.GetSystemMetrics(1) // 2
-        self.assertEqual(self.screen.y_offset, y_offset)
+        self.assertEqual(self.screen.y_offset, self.res_return // 2)
+
+    # def random_test(self):
+    #     with patch('win32api.GetSystemMetrics', return_value='meme'):
+    #         res = self.screen.res
+    #         print(res)
