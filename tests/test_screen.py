@@ -31,6 +31,7 @@ class ScreenTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.screen.get_screen(5)
 
+
     # def random_test(self):
     #     with patch('win32api.GetSystemMetrics', return_value='meme'):
     #         res = self.screen.res
