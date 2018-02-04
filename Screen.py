@@ -1,9 +1,11 @@
 import win32api
+from PIL import ImageGrab
 
 
-class Screen():
-    def __init__(self, number, win_api=win32api):
+class Screen:
+    def __init__(self, number, win_api=win32api, image_grabber=ImageGrab):
         self.win_api = win_api
+        self.image_grabber = image_grabber
         self.number = number
         self._setup()
 
@@ -14,4 +16,16 @@ class Screen():
         self.x_offset = self.res[0] // 2
         self.y_offset = self.res[1] // 2
 
+    def get_screen(self, section):
+        # if 1 <= section >= 4:
+        #     raise Exception('Section must be between 1-4 inclusive')
+        if section == 1:
+            img = self.image_grabber.grab((0, 0, self.res[0] // 2, self.res[1] // 2))
+        elif section == 2:
+            img = self.image_grabber.grab((self.x_offset, 0, self.res[0], self.res[1] // 2))
+        elif section == 3:
+            img = self.image_grabber.grab((0, self.y_offset, self.res[0] // 2, self.res[1]))
+        elif section == 4:
+            img = self.image_grabber.grab((self.x_offset, self.y_offset, self.res[0], self.res[1]))
+        return img
 
