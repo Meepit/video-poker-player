@@ -28,12 +28,17 @@ class Hand:
         rank = self.screen.image_grabber.grab((x1, y1, x1 + rank_offset, y1 + rank_offset))
         rank = rank.convert("1")  # Convert to black/white for better detection.
         rank_str = ocr.image_to_string(rank, config='-psm 10000 -c tessedit_char_whitelist=0123456789JQKA')
-        if rank_str == "10":
-            rank_str = "T"
-        if rank_str == "0":
-            rank_str = "Q"
+        rank_str = self._check_possible_misdetections(rank_str)
         if len(rank_str) == 0 or len(rank_str) > 1:
             print("There was a problem detecting rank. Detected as {0}. Retrying".format(rank_str))
             #time.sleep(1)
             return self.determine_rank(card_num)
         return rank_str
+
+    def _check_possible_misdetections(self, detection):
+        result = detection
+        if detection == "10":
+            result = "T"
+        if detection == "0":
+            result = "Q"
+        return result
