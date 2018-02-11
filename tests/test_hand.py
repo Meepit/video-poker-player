@@ -35,8 +35,19 @@ class HandTest(unittest.TestCase):
         self.hand.set_card_rank(1, "H")
         self.assertEqual(self.hand.get_card_rank(1), "H")
 
-    def test_determine_rank(self):
+    def test_determine_correct_rank(self):
         self.img.convert.return_value = True
         self.ocr.image_to_string.return_value = "5"
         self.assertEqual(self.hand.determine_rank(1, ocr=self.ocr), "5")
+
+    def test_determine_correct_rank_10(self):
+        self.img.convert.return_value = True
+        self.ocr.image_to_string.return_value = "10"
+        self.assertEqual(self.hand.determine_rank(1, ocr=self.ocr), "T")
+
+    def test_determine_correct_rank_0(self):
+        self.img.convert.return_value = True
+        self.ocr.image_to_string.return_value = "0"
+        self.assertEqual(self.hand.determine_rank(1, ocr=self.ocr), "Q")
+
 
