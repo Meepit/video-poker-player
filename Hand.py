@@ -11,3 +11,10 @@ class Hand:
 
     def get_card_rank(self, card_num):
         return self.cards["card{0}".format(card_num)]["rank"]
+
+    def set_card_suit(self, card_num, suit):
+        self.cards["card{0}".format(card_num)]["rank"] = suit
+
+    def get_card_suit(self, card_num):
+        return self.cards["card{0}".format(card_num)]["suit"]
+
