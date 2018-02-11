@@ -1,9 +1,11 @@
 import pytesseract
-
+from time import sleep
+import os
 
 class Hand:
-    def __init__(self, screen):
+    def __init__(self, screen, suits):
         self.screen = screen
+        self.suits = suits
         self.cards = screen.build_locations(screen.screen)
 
     def get_card_coord(self, card_num):
@@ -31,9 +33,33 @@ class Hand:
         rank_str = self._check_possible_misdetections(rank_str)
         if len(rank_str) == 0 or len(rank_str) > 1:
             print("There was a problem detecting rank. Detected as {0}. Retrying".format(rank_str))
-            #time.sleep(1)
+            sleep(1)
             return self.determine_rank(card_num)
         return rank_str
+
+    def determine_suit(self, card_num, os=os):
+        x1, y1, x2, y2 = self.get_card_coord(card_num)
+        suit_offset = int((y2 - y1) * 0.25)
+        suit = self.screen.image_grabber.grab((x1, y1 + suit_offset, x1 + suit_offset, y1 + (suit_offset * 2)))
+        pixel_colour = suit.getpixel((suit_offset // 2, suit_offset // 2))
+        suit = suit.convert("L")
+        suit = suit.resize((30, 30))
+        suit_filename = "screen" + str(self.screen.screen_num) + "_card" + str(card_num) + ".png"
+        suit.save("detections/" + suit_filename)
+        suit_filesize = os.path.getsize("detections/" + suit_filename)
+        print(suit_filesize)
+        print(pixel_colour[0])
+        print(suit.getpixel())
+        if pixel_colour[0] > 165:  # red suit
+            abs_diff_diamond = abs(suit_filesize - self.suits["diamond"])
+            abs_diff_heart = abs(suit_filesize - self.suits["heart"])
+            return "D" if abs_diff_diamond < abs_diff_heart else "H"
+        else:  # black suit
+            abs_diff_spade = abs(suit_filesize - self.suits["spade"])
+            abs_diff_club = abs(suit_filesize - self.suits["club"])
+            if self.get_card_rank(card_num) == "Q":  # Bottom part of Queen clips into suit causing misdetection.
+                abs_diff_spade = abs(suit_filesize - self.suits["q_spade"])
+            return "C" if abs_diff_club < abs_diff_spade else "S"
 
     def _check_possible_misdetections(self, detection):
         result = detection
