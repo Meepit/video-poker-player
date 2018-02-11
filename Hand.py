@@ -5,3 +5,9 @@ class Hand:
 
     def get_card_coord(self, card_num):
         return self.cards["card{0}".format(card_num)]["coord"]
+
+    def set_card_rank(self, card_num, rank):
+        self.cards["card{0}".format(card_num)]["rank"] = rank
+
+    def get_card_rank(self, card_num):
+        return self.cards["card{0}".format(card_num)]["rank"]

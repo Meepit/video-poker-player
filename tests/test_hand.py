@@ -14,3 +14,12 @@ class HandTest(unittest.TestCase):
 
     def test_get_card_coord(self):
         self.assertEqual(self.hand.get_card_coord(1), self.cards["card1"]["coord"])
+
+    def test_set_card_rank(self):
+        self.hand.set_card_rank(1, "5")
+        self.assertEqual(self.hand.cards["card1"]["rank"], "5")
+
+    def test_get_card_rank(self):
+        self.hand.set_card_rank(1, "5")
+        self.assertEqual(self.hand.get_card_rank(1), "5")
+
