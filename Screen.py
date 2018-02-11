@@ -24,6 +24,7 @@ class Screen:
         if self.number == 4:
             self._x_offset = self.res[0] // 2
             self._y_offset = self.res[1] // 2
+        self.screen = self.get_screen(self.number)
 
     def get_screen(self, section):
         if 1 <= section >= 4:
