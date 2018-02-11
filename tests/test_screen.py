@@ -31,9 +31,9 @@ class ScreenTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.screen.get_screen(5)
 
-    def test_build_card_locations(self):
+    def test_build_locations(self):
         with patch('screen.Screen._get_card_locations', return_value=[(0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)]):
-            self.screen.build_card_locations("img")
+            self.screen.build_locations("img")
             self.screen._get_card_locations.assert_called()
 
     # def random_test(self):

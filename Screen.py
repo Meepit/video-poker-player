@@ -38,9 +38,10 @@ class Screen:
             img = self.image_grabber.grab((self.x_offset, self.y_offset, self.res[0], self.res[1]))
         return img
 
-    def build_card_locations(self, img):
+    def build_locations(self, img):
         card_boxes = self._get_card_locations(img)
         coords = self._build_coord_dict(card_boxes)
+        self._get_deal_button(coords)
         return coords
 
     def _build_coord_dict(self, card_boxes):
@@ -72,3 +73,7 @@ class Screen:
         # Giving coordinates of cards in order.
         card_boxes = sorted(card_boxes)[:4]
         return sorted([i[1] for i in card_boxes])
+
+    def _get_deal_button(self, coords):
+        coord = coords["card3"]["coord"]
+        self.deal_button = (coord[0], coord[3] + ((coord[3] - coord[1]) // 3))
