@@ -9,14 +9,21 @@ class Screen:
         self.win_api = win_api
         self.image_grabber = image_grabber
         self.number = number
+        self.x_offset = 0
+        self.y_offset = 0
         self._setup()
 
     def _setup(self):
         # Sets the screen resolution and set the x_offset and y_offset
         # Which represent the midway x,y points such that we can divide the screen in 1/4 segments
         self.res = (self.win_api.GetSystemMetrics(0), self.win_api.GetSystemMetrics(1))
-        self.x_offset = self.res[0] // 2
-        self.y_offset = self.res[1] // 2
+        if self.number == 2:
+            self.x_offset = self.res[0] // 2
+        if self.number == 3:
+            self._y_offset = self.res[1] // 2
+        if self.number == 4:
+            self._x_offset = self.res[0] // 2
+            self._y_offset = self.res[1] // 2
 
     def get_screen(self, section):
         if 1 <= section >= 4:
@@ -31,7 +38,23 @@ class Screen:
             img = self.image_grabber.grab((self.x_offset, self.y_offset, self.res[0], self.res[1]))
         return img
 
-    def get_card_locations(self, img):
+    def build_card_locations(self, img):
+        card_boxes = self._get_card_locations(img)
+        coords = self._build_coord_dict(card_boxes)
+        return coords
+
+    def _build_coord_dict(self, card_boxes):
+        coords = dict()
+        for i in range(4):
+            coords["card{0}".format(i+1)] = {"coord":
+                                      (self.x_offset + card_boxes[i][0],
+                                       self.y_offset + card_boxes[i][1],
+                                       self.x_offset + card_boxes[i][0] + card_boxes[i][2],
+                                       self.y_offset + card_boxes[i][1] + card_boxes[i][3]
+                                       )}
+        return coords
+
+    def _get_card_locations(self, img):
         # img: PIL image object
         # Convert to cv2 image, using image contour detection to find coordinates of 4 largest cards
         print("Getting locations")
