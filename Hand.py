@@ -2,11 +2,13 @@ import pytesseract
 from time import sleep
 import os
 
+
 class Hand:
-    def __init__(self, screen, suits):
+    def __init__(self, screen, suits, os=os):
         self.screen = screen
         self.suits = suits
         self.cards = screen.build_locations(screen.screen)
+        self.os = os
 
     def get_card_coord(self, card_num):
         return self.cards["card{0}".format(card_num)]["coord"]
@@ -37,19 +39,12 @@ class Hand:
             return self.determine_rank(card_num)
         return rank_str
 
-    def determine_suit(self, card_num, os=os):
+    def determine_suit(self, card_num):
         x1, y1, x2, y2 = self.get_card_coord(card_num)
         suit_offset = int((y2 - y1) * 0.25)
         suit = self.screen.image_grabber.grab((x1, y1 + suit_offset, x1 + suit_offset, y1 + (suit_offset * 2)))
         pixel_colour = suit.getpixel((suit_offset // 2, suit_offset // 2))
-        suit = suit.convert("L")
-        suit = suit.resize((30, 30))
-        suit_filename = "screen" + str(self.screen.screen_num) + "_card" + str(card_num) + ".png"
-        suit.save("detections/" + suit_filename)
-        suit_filesize = os.path.getsize("detections/" + suit_filename)
-        print(suit_filesize)
-        print(pixel_colour[0])
-        print(suit.getpixel())
+        suit_filesize = self._process_suit(suit, card_num)
         if pixel_colour[0] > 165:  # red suit
             abs_diff_diamond = abs(suit_filesize - self.suits["diamond"])
             abs_diff_heart = abs(suit_filesize - self.suits["heart"])
@@ -60,6 +55,14 @@ class Hand:
             if self.get_card_rank(card_num) == "Q":  # Bottom part of Queen clips into suit causing misdetection.
                 abs_diff_spade = abs(suit_filesize - self.suits["q_spade"])
             return "C" if abs_diff_club < abs_diff_spade else "S"
+
+    def _process_suit(self, img, card_num):
+        suit = img.convert("L")
+        suit = img.resize((30, 30))
+        suit_filename = "screen" + str(self.screen.screen_num) + "_card" + str(card_num) + ".png"
+        suit.save("detections/" + suit_filename)
+        suit_filesize = self.os.path.getsize("detections/" + suit_filename)
+        return suit_filesize
 
     def _check_possible_misdetections(self, detection):
         result = detection

@@ -9,14 +9,14 @@ class HandTest(unittest.TestCase):
     def setUp(self):
         screen = MagicMock()
         self.img = MagicMock()
-        screen.screen_grabber.grab.return_value = self.img
+        screen.image_grabber.grab.return_value = self.img
         self.cards = {"card1": {"coord": (0, 0, 5, 5)}}
         screen.screen.return_value = 1
         screen.build_locations.return_value = self.cards
-        self.suits = {"heart": 170, "diamond": 180}
-        self.hand = Hand(screen, self.suits)
-        self.ocr = MagicMock()
         self.os = MagicMock()
+        self.suits = {"heart": 170, "diamond": 180}
+        self.hand = Hand(screen, self.suits, self.os)
+        self.ocr = MagicMock()
 
     def test_get_card_coord(self):
         self.assertEqual(self.hand.get_card_coord(1), self.cards["card1"]["coord"])
@@ -56,4 +56,4 @@ class HandTest(unittest.TestCase):
         self.img.getpixel.return_value = [170, 170, 170]
         self.ocr.image_to_string.return_value = "S"
         self.os.path.getsize.return_value = 175
-        self.assertEqual(self.hand.determine_suit(1, os=self.os), "S")
+        self.assertEqual(self.hand.determine_suit(1), "H")
