@@ -17,6 +17,17 @@ class Bot:
         evs = r.text.split(" ")
         return 3 if float(evs[0]) > float(evs[1]) else 4
 
+    def add_to_queue(self, card=0, coord=()):
+        if coord:
+            self.queue.put(coord)
+            return
+        if card == 3:
+            location = self.hand.get_card_coord(3)
+            self.queue.put((location[0] + 20, location[1] + 20))
+        elif card == 4:
+            location = self.hand.get_card_coord(4)
+            self.queue.put((location[0] + 20, location[1] + 20))
+
     def _build_url(self):
         ranks = '23456789tjqka'
         suits = 'hsdc'

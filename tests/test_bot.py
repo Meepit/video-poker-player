@@ -25,5 +25,10 @@ class BotTest(unittest.TestCase):
         self.req_obj.text = "0.912 0.812 "
         self.assertEqual(self.bot.calculate_action(), 4)
 
+    def test_add_card_to_queue(self):
+        self.bot.add_to_queue(card=3)
+        self.q.put.assert_called()
 
-
+    def test_add_coord_to_queue(self):
+        self.bot.add_to_queue(coord=(5,5))
+        self.q.put.assert_called()

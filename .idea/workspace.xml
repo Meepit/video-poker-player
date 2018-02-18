@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7914255b-65c9-4711-8ccc-3db2337fafb1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bot.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_bot.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bot.py" afterPath="$PROJECT_DIR$/bot.py" />
+      <change beforePath="$PROJECT_DIR$/tests/test_bot.py" afterPath="$PROJECT_DIR$/tests/test_bot.py" />
     </list>
     <ignored path="video-poker-bot.py.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,11 +17,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_card_status.coverage" NAME="Unittests for test_hand.HandTest.test_card_status Coverage Results" MODIFIED="1518973828703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_bot_BotTest_test_add_to_queue.coverage" NAME="Unittests for test_bot.BotTest.test_add_to_queue Coverage Results" MODIFIED="1518986241145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Hand.coverage" NAME="Hand Coverage Results" MODIFIED="1518366116440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_bot_BotTest.coverage" NAME="Unittests for test_bot.BotTest Coverage Results" MODIFIED="1518986286825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_get_card_coord.coverage" NAME="Unittests for test_hand.HandTest.test_get_card_coord Coverage Results" MODIFIED="1518973825734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_determine_correct_suit_H.coverage" NAME="Unittests for test_hand.HandTest.test_determine_correct_suit_H Coverage Results" MODIFIED="1518970482189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_determine_rank.coverage" NAME="Unittests for test_hand.HandTest.test_determine_rank Coverage Results" MODIFIED="1518369813790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_determine_correct_rank_10.coverage" NAME="Unittests for test_hand.HandTest.test_determine_correct_rank_10 Coverage Results" MODIFIED="1518964673195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_bot_BotTest_test_add_coord_to_queue.coverage" NAME="Unittests for test_bot.BotTest.test_add_coord_to_queue Coverage Results" MODIFIED="1518986283072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_determine_correct_rank_0.coverage" NAME="Unittests for test_hand.HandTest.test_determine_correct_rank_0 Coverage Results" MODIFIED="1518964668217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_bot_BotTest_test_calculate_action.coverage" NAME="Unittests for test_bot.BotTest.test_calculate_action Coverage Results" MODIFIED="1518978418336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_screen_ScreenTest.coverage" NAME="Unittests for test_screen.ScreenTest Coverage Results" MODIFIED="1518970867479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -34,7 +37,7 @@
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_set_card_rank.coverage" NAME="Unittests for test_hand.HandTest.test_set_card_rank Coverage Results" MODIFIED="1518961439362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_in_test_screen.coverage" NAME="Unittests in test_screen Coverage Results" MODIFIED="1518364474503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_get_card_rank.coverage" NAME="Unittests for test_hand.HandTest.test_get_card_rank Coverage Results" MODIFIED="1518368014921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_screen_ScreenTest_test_build_locations.coverage" NAME="Unittests for test_screen.ScreenTest.test_build_locations Coverage Results" MODIFIED="1518365348230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_screen_ScreenTest_test_build_locations.coverage" NAME="Unittests for test_screen.ScreenTest.test_build_locations Coverage Results" MODIFIED="1518983927657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_determine_correct_suit_D.coverage" NAME="Unittests for test_hand.HandTest.test_determine_correct_suit_D Coverage Results" MODIFIED="1518972928652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_determine_correct_rank_O.coverage" NAME="Unittests for test_hand.HandTest.test_determine_correct_rank_O Coverage Results" MODIFIED="1518369997230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/video_poker_bot_py$Unittests_for_test_hand_HandTest_test_determine_correct_suit_C.coverage" NAME="Unittests for test_hand.HandTest.test_determine_correct_suit_C Coverage Results" MODIFIED="1518973156814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -69,7 +72,7 @@
           <file leaf-file-name="screen.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/screen.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-338">
+                <state relative-caret-position="68">
                   <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
@@ -81,8 +84,8 @@
           <file leaf-file-name="bot.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bot.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+                <state relative-caret-position="340">
+                  <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -91,8 +94,8 @@
           <file leaf-file-name="hand.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/hand.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+                <state relative-caret-position="1462">
+                  <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -107,7 +110,7 @@
           <file leaf-file-name="test_hand.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_hand.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
+                <state relative-caret-position="434">
                   <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
@@ -119,8 +122,8 @@
           <file leaf-file-name="test_bot.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_bot.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                <state relative-caret-position="492">
+                  <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -131,8 +134,8 @@
           <file leaf-file-name="test_screen.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_screen.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+                <state relative-caret-position="357">
+                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -195,6 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -207,7 +211,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,7 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_bot.BotTest.test_calculate_action_4">
+  <component name="RunManager" selected="Python tests.Unittests for test_bot.BotTest">
     <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
       <method />
     </configuration>
@@ -366,7 +369,7 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration name="Unittests for test_bot.BotTest.test_calculate_action" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_bot.BotTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -378,7 +381,37 @@
       <module name="video-poker-bot.py" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_bot.BotTest.test_calculate_action&quot;" />
+      <option name="_new_target" value="&quot;test_bot.BotTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests for test_bot.BotTest.test_add_coord_to_queue" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="video-poker-bot.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_bot.BotTest.test_add_coord_to_queue&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests for test_bot.BotTest.test_add_to_queue" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="video-poker-bot.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_bot.BotTest.test_add_to_queue&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests for test_bot.BotTest.test_calculate_action_4" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -396,7 +429,7 @@
       <option name="_new_target" value="&quot;test_bot.BotTest.test_calculate_action_4&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for test_hand.HandTest.test_card_status" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_screen.ScreenTest.test_build_locations" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -408,37 +441,7 @@
       <module name="video-poker-bot.py" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_hand.HandTest.test_card_status&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
-    <configuration name="Unittests for test_hand.HandTest.test_card_status_false" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="video-poker-bot.py" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_hand.HandTest.test_card_status_false&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
-    <configuration name="Unittests for test_hand.HandTest.test_card_status_true" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="video-poker-bot.py" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_hand.HandTest.test_card_status_true&quot;" />
+      <option name="_new_target" value="&quot;test_screen.ScreenTest.test_build_locations&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests in video-poker-bot.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
@@ -458,19 +461,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in video-poker-bot.py" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_hand.HandTest.test_card_status" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_hand.HandTest.test_card_status_false" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_hand.HandTest.test_card_status_true" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_calculate_action" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_calculate_action_4" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_calculate_action_4" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_screen.ScreenTest.test_build_locations" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_add_to_queue" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_add_coord_to_queue" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_calculate_action_4" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_calculate_action" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_hand.HandTest.test_card_status_true" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_hand.HandTest.test_card_status_false" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_hand.HandTest.test_card_status" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_add_coord_to_queue" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_add_to_queue" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_screen.ScreenTest.test_build_locations" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_bot.BotTest.test_calculate_action_4" />
       </list>
     </recent_temporary>
   </component>
@@ -491,17 +494,14 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_bot_BotTest_test_calculate_action - 2018.02.18 at 18h 26m 06s.xml">
-      <configuration name="Unittests for test_bot.BotTest.test_calculate_action" configurationId="tests" />
+    <history-entry file="Unittests_for_test_bot_BotTest - 2018.02.18 at 20h 38m 08s.xml">
+      <configuration name="Unittests for test_bot.BotTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_bot_BotTest_test_calculate_action - 2018.02.18 at 18h 26m 19s.xml">
-      <configuration name="Unittests for test_bot.BotTest.test_calculate_action" configurationId="tests" />
+    <history-entry file="Unittests_for_test_bot_BotTest_test_add_coord_to_queue - 2018.02.18 at 20h 38m 03s.xml">
+      <configuration name="Unittests for test_bot.BotTest.test_add_coord_to_queue" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_bot_BotTest_test_calculate_action - 2018.02.18 at 18h 26m 49s.xml">
-      <configuration name="Unittests for test_bot.BotTest.test_calculate_action" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_bot_BotTest_test_calculate_action - 2018.02.18 at 18h 26m 59s.xml">
-      <configuration name="Unittests for test_bot.BotTest.test_calculate_action" configurationId="tests" />
+    <history-entry file="Unittests_for_test_bot_BotTest_test_add_to_queue - 2018.02.18 at 20h 37m 23s.xml">
+      <configuration name="Unittests for test_bot.BotTest.test_add_to_queue" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_test_bot_BotTest_test_calculate_action_4 - 2018.02.18 at 18h 29m 37s.xml">
       <configuration name="Unittests for test_bot.BotTest.test_calculate_action_4" configurationId="tests" />
@@ -521,6 +521,9 @@
     <history-entry file="Unittests_for_test_hand_HandTest_test_get_card_coord - 2018.02.18 at 17h 10m 26s.xml">
       <configuration name="Unittests for test_hand.HandTest.test_get_card_coord" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_test_screen_ScreenTest_test_build_locations - 2018.02.18 at 19h 58m 49s.xml">
+      <configuration name="Unittests for test_screen.ScreenTest.test_build_locations" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
@@ -532,7 +535,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27865168" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2235955" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16687042" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1705379" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -597,6 +600,90 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/screen.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_hand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_screen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -629,9 +716,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -669,9 +754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -709,9 +792,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -729,9 +810,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -749,9 +828,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -769,9 +846,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -789,9 +864,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -809,9 +882,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -829,9 +900,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -849,9 +918,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,9 +936,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -889,9 +954,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -909,9 +972,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -929,9 +990,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -940,41 +999,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_screen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_hand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/screen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-338">
+        <state relative-caret-position="68">
           <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -982,21 +1012,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot.py">
+    <entry file="file://$PROJECT_DIR$/hand.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="1462">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_hand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_screen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="492">
+          <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
