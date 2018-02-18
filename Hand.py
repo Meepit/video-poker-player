@@ -56,6 +56,20 @@ class Hand:
                 abs_diff_spade = abs(suit_filesize - self.suits["q_spade"])
             return "C" if abs_diff_club < abs_diff_spade else "S"
 
+    def get_cards_status(self):
+        img = self.screen.image_grabber.grab()
+        ready = False
+        for i in range(1, 5):
+            coord = self.get_card_coord(i)
+            pixel_colour = img.getpixel((coord[0] + 55, coord[1] + 2))
+            if pixel_colour[0] > 240 and pixel_colour[1] > 240 and pixel_colour[2] > 240:
+                ready = True
+            else:
+                ready = False
+        if img.getpixel((self.get_card_coord(2)[2] + 50, self.get_card_coord(2)[1] + 50))[0] > 25:
+            ready = False
+        return ready
+
     def _process_suit(self, img, card_num):
         suit = img.convert("L")
         suit = img.resize((30, 30))
@@ -71,3 +85,4 @@ class Hand:
         if detection == "0":
             result = "Q"
         return result
+
