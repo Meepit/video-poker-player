@@ -30,5 +30,5 @@ class BotTest(unittest.TestCase):
         self.q.put.assert_called()
 
     def test_add_coord_to_queue(self):
-        self.bot.add_to_queue(coord=(5,5))
+        self.bot.add_to_queue(coord=(5, 5))
         self.q.put.assert_called()

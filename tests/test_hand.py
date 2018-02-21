@@ -82,3 +82,14 @@ class HandTest(unittest.TestCase):
         self.img.getpixel.return_value = [277, 277, 277]
         self.assertFalse(self.hand.get_cards_status())
 
+    def test_get_hand(self):
+        for i in range(1,5):
+            self.hand.set_card_rank(i, "5")
+            self.hand.set_card_suit(i, "h")
+        self.assertEqual(self.hand.get_hand(), "5h 5h 5h 5h ")
+
+    # @patch('hand.Hand.determine_rank')
+    # @patch('hand.Hand.determine_suit')
+    # def test_get_ranks_and_suits(self):
+    #     self.hand.get_ranks_and_suits()
+    #     self.hand.determine_rank.assert_called()

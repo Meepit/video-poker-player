@@ -1,4 +1,5 @@
 import requests
+import time
 
 
 class Bot:
@@ -27,6 +28,34 @@ class Bot:
         elif card == 4:
             location = self.hand.get_card_coord(4)
             self.queue.put((location[0] + 20, location[1] + 20))
+
+    def start(self):
+        while True:
+            print("Waiting for cards")
+            while not self.hand.get_cards_status():
+                pass
+            time.sleep(0.5)  # failsafe
+            # get card ranks and suits
+            self.hand.get_ranks_and_suits()
+            # Temporary fix to get around the issue of pickem poker client slowing down causing early detection#
+            if self.hand.get_card_rank(1).lower() == "K":
+                print("Retrying to be safe.")
+                self.hand.get_ranks_and_suits()
+            # End temp fix #
+            print(self.hand.get_hand())
+            action = self.calculate_action()
+            self.add_to_queue(card=action)
+            print("Choosing {0}".format(action))
+            # Get deal button
+            deal_button_xy = self.hand.screen.deal_button
+            deal_button = self.hand.screen.image_grabber.grab((deal_button_xy[0], deal_button_xy[1], deal_button_xy[0] + 3, deal_button_xy[1] +3))
+            deal_button_pixel_colour = deal_button.getpixel((2, 2))[0]
+            if deal_button_pixel_colour <= 250:
+                print("\tWaiting for deal button..")
+            while not deal_button.getpixel((2, 2))[0] >= 200:  # Deal button not ready
+                deal_button = self.hand.screen.image_grabber.grab((deal_button_xy[0], deal_button_xy[1], deal_button_xy[0] + 3, deal_button_xy[1] + 3))
+            self.add_to_queue(coord=self.hand.screen.deal_button)
+            # end deal button section
 
     def _build_url(self):
         ranks = '23456789tjqka'

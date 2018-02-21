@@ -20,14 +20,14 @@ class Screen:
         if self.number == 2:
             self.x_offset = self.res[0] // 2
         if self.number == 3:
-            self._y_offset = self.res[1] // 2
+            self.y_offset = self.res[1] // 2
         if self.number == 4:
-            self._x_offset = self.res[0] // 2
-            self._y_offset = self.res[1] // 2
+            self.x_offset = self.res[0] // 2
+            self.y_offset = self.res[1] // 2
         self.screen = self.get_screen(self.number)
 
     def get_screen(self, section):
-        if 1 <= section >= 4:
+        if section < 1 or section > 4:
             raise ValueError('Section must be between 1-4 inclusive')
         if section == 1:
             img = self.image_grabber.grab((0, 0, self.res[0] // 2, self.res[1] // 2))

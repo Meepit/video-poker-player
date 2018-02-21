@@ -1,10 +1,11 @@
 import pytesseract
 from time import sleep
 import os
+from suits import Suits
 
 
 class Hand:
-    def __init__(self, screen, suits, os=os):
+    def __init__(self, screen, suits=Suits, os=os):
         self.screen = screen
         self.suits = suits
         self.cards = screen.build_locations(screen.screen)
@@ -20,10 +21,16 @@ class Hand:
         return self.cards["card{0}".format(card_num)]["rank"]
 
     def set_card_suit(self, card_num, suit):
-        self.cards["card{0}".format(card_num)]["rank"] = suit
+        self.cards["card{0}".format(card_num)]["suit"] = suit
 
     def get_card_suit(self, card_num):
         return self.cards["card{0}".format(card_num)]["suit"]
+
+    def get_hand(self):
+        str = ""
+        for i in range(1, 5):
+            str += self.cards["card{0}".format(i)]["rank"] + self.cards["card{0}".format(i)]["suit"] + " "
+        return str
 
     def determine_rank(self, card_num, ocr=pytesseract):
         # Rank makes up about 27% of the card, suit makes up about 25%
@@ -56,6 +63,13 @@ class Hand:
                 abs_diff_spade = abs(suit_filesize - self.suits["q_spade"])
             return "C" if abs_diff_club < abs_diff_spade else "S"
 
+    def get_ranks_and_suits(self):
+        for i in range(1, 5):
+            rank = self.determine_rank(i)
+            self.set_card_rank(i, rank)
+            suit = self.determine_suit(i)
+            self.set_card_suit(i, suit)
+
     def get_cards_status(self):
         img = self.screen.image_grabber.grab()
         ready = False
@@ -73,7 +87,7 @@ class Hand:
     def _process_suit(self, img, card_num):
         suit = img.convert("L")
         suit = img.resize((30, 30))
-        suit_filename = "screen" + str(self.screen.screen_num) + "_card" + str(card_num) + ".png"
+        suit_filename = "screen" + str(self.screen.number) + "_card" + str(card_num) + ".png"
         suit.save("detections/" + suit_filename)
         suit_filesize = self.os.path.getsize("detections/" + suit_filename)
         return suit_filesize
